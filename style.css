@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  --font: 'Poppins', sans-serif;
+  --white: #fffafa;
+  --purple: #531CB3;
+  --orange: #e06a10;
+  font-family: var(--font);
+}
+
+a{
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--orange);
+  height: 100%;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  padding: 2rem 0 3rem 0;
+  background: linear-gradient(rgb(56, 25, 15), var(--orange)); 
+  
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;  
+}
+
+.menu ul li {
+    display: inline-block;
+}
+.menu ul li a {
+    display: block;
+    color: var(--white);
+    padding: 20px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.menu ul{
+  display: flex;
+
+}
+
+.menu ul li a:hover {
+  color: var(--purple);
+  text-shadow: 1px 5px 5px rgba(255, 255, 255, 0.1);
+  animation-name: fade;
+  animation-duration: 0.8s;
+}
+
+.brand-style {
+  width: 35%;
+}
+
+.menu .whatsapp {
+  width: 200px;
+  height: 40px;
+  display: flex;
+  font-size: 14px;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--white);
+  border-radius: 100px;
+  color: var(--purple) ;
+  font-weight: bold;
+}
+
+.container_Whats{
+  display: flex;
+  flex-direction: row;
+  width: 53%;
+  justify-content: space-between;
+}
+
+.whatsapp:hover {
+  background: var(--white);
+  box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+}
+
+/*============== Slideshow container ==============*/
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  height: 90vh;
+}
+
+.slide_center{
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.dots {
+  text-align:center;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.container_bubbles{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.container_bubbles:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.container_bubbles div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--purple);
+}
+
+.little_bubble{
+  height: 16px;
+  width: 16px;
+}
+
+.medium_bubble{
+  height: 30px;
+  width: 30px;
+}
+
+.big_bubble{
+  height: 70px;
+  width: 70px;
+}
+
+.medium_left{
+  margin-left: 80px;
+  margin-bottom: -10px;
+}
+
+.medium_right{
+  margin-right: 80px;
+  margin-bottom: -10px;
+}
+
+.little_left{
+  margin-left: 30px;
+  margin-bottom: -8px;
+}
+
+.little_right{
+  margin-right: 30px;
+  margin-bottom: -8px;
+} 
+
+/* filler of temporary spaces*/
+.temp {
+  height: 100vh;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: var(--purple);
+  opacity: 0.5;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  animation-name: fade;
+  animation-duration: 0.8s;
+  opacity: 1;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.footer {
+  width: 100%;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  background: var(--white); 
+  }
+
+  .info-footer{
+    width: 78%;
+    justify-content: space-around;
+    font-size: 14px;
+    display: flex;
+    color: grey;
+  }
+
+  .info-footer p{
+    margin-top: 5px;
+  }
+
+  .info-social{
+    width: 15%;
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  .circle-icons{
+    width: 38px;
+    height: 38px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--purple);
+  }
+/*============== SCROLLBAR SECTION ==============*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9D9D9D;
+  border-radius: 10px;
+}
